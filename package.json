@@ -1,0 +1,34 @@
+{
+  "name": "cost-guardian",
+  "version": "1.0.0",
+  "description": "Real-time cost tracking and budget management for Claude Code",
+  "main": "scripts/estimator.js",
+  "scripts": {
+    "test": "node scripts/pricing.js list && node scripts/store.js init && echo 'All checks passed'",
+    "init-db": "node scripts/store.js init",
+    "report": "node scripts/reporter.js session ${CLAUDE_SESSION_ID:-test}",
+    "daily": "node scripts/reporter.js daily 7"
+  },
+  "keywords": [
+    "claude-code",
+    "cost-tracking",
+    "budget",
+    "tokens",
+    "claude",
+    "anthropic",
+    "ai-coding"
+  ],
+  "author": "Manavarya Singh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Manavarya09/cost-guardian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Manavarya09/cost-guardian/issues"
+  },
+  "homepage": "https://github.com/Manavarya09/cost-guardian#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
