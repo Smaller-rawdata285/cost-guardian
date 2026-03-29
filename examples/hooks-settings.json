@@ -1,0 +1,25 @@
+{
+  "_comment": "Add this to your ~/.claude/settings.json to enable Cost Guardian hooks",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/plugins/cost-guardian/hooks/budget-guard.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/plugins/cost-guardian/hooks/track-usage.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
