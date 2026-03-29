@@ -1,0 +1,25 @@
+{
+  "name": "cost-guardian-marketplace",
+  "owner": {
+    "name": "Manavarya Singh",
+    "url": "https://github.com/Manavarya09"
+  },
+  "plugins": [
+    {
+      "name": "cost-guardian",
+      "source": ".",
+      "description": "Real-time cost tracking, budget guardrails, and spending reports for Claude Code sessions. Zero setup required.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Manavarya Singh"
+      },
+      "category": "productivity",
+      "tags": [
+        "cost-tracking",
+        "budget-management",
+        "token-usage",
+        "spending-reports"
+      ]
+    }
+  ]
+}
