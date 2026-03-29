@@ -1,0 +1,28 @@
+{
+  "budgets": {
+    "session": {
+      "limit": 5.00,
+      "mode": "hard"
+    },
+    "daily": {
+      "limit": 25.00,
+      "mode": "soft"
+    },
+    "weekly": {
+      "limit": 100.00,
+      "mode": "soft"
+    },
+    "monthly": {
+      "limit": 400.00,
+      "mode": "soft"
+    }
+  },
+  "status_line": true,
+  "notifications": {
+    "warn_at_percent": [50, 75, 90]
+  },
+  "tracking": {
+    "group_by_branch": true,
+    "estimate_multiplier": 1.0
+  }
+}
