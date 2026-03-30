@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "cost-guardian",
-      "source": ".",
+      "source": "./",
       "description": "Real-time cost tracking, budget guardrails, and spending reports for Claude Code sessions. Zero setup required.",
       "version": "1.0.0",
       "author": {
