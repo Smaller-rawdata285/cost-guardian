@@ -1,7 +1,7 @@
 {
   "name": "cost-guardian",
   "description": "Zero-setup cost tracking and budget management for Claude Code. Real-time burn rate, budget guardrails, ASCII reports, and pre-task cost estimation — all without external dependencies.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": {
     "name": "Manavarya Singh",
     "url": "https://github.com/Manavarya09"

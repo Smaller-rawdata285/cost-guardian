@@ -9,7 +9,7 @@
       "name": "cost-guardian",
       "source": "./",
       "description": "Real-time cost tracking, budget guardrails, and spending reports for Claude Code sessions. Zero setup required.",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": {
         "name": "Manavarya Singh"
       },

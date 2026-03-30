@@ -8,6 +8,19 @@ Zero setup. No Docker. No Grafana. No environment variables. Just install and go
 
 ---
 
+## What's New in v2.0
+
+- **Per-tool cost feedback** — see `⚡ +$0.03 (Read) | Session: $2.41` after every tool call
+- **Multi-model comparison** — `/cost-estimate` shows cost across all Claude models with savings %
+- **Branch cost tracking** — `/cost-report branch` shows how much each feature branch costs
+- **CSV/JSON export** — `/cost-guardian export csv ~/costs.csv`
+- **Session start summary** — see yesterday's spend when you start a new session
+- **Configurable multipliers** — tune estimation accuracy per tool type
+- **8 models** — all current Anthropic models including extended thinking variants
+- **Security fixes** — SQL injection patched, error logging added, override expiry
+
+---
+
 ## The Problem
 
 Every Claude Code user has been there:
@@ -103,10 +116,18 @@ claude plugin install cost-guardian
 git clone https://github.com/Manavarya09/cost-guardian.git ~/.claude/plugins/cost-guardian
 ```
 
-Then add to your Claude Code settings:
+Then add to your Claude Code settings (`~/.claude/settings.json`):
 ```json
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [{
+          "type": "command",
+          "command": "bash ~/.claude/plugins/cost-guardian/hooks/session-start.sh"
+        }]
+      }
+    ],
     "PreToolUse": [
       {
         "hooks": [{
@@ -156,10 +177,22 @@ Then add to your Claude Code settings:
 
 ### View Reports
 ```
-/cost-report              # Current session
-/cost-report daily        # Last 7 days
+/cost-report              # Current session (with model + expensive call breakdown)
+/cost-report daily        # Last 7 days (with averages + projected monthly)
 /cost-report weekly       # Last 4 weeks
 /cost-report monthly      # Last 30 days
+/cost-report branch       # Cost per git branch
+```
+
+### Export Data
+```
+/cost-guardian export csv ~/costs.csv    # Export all data as CSV
+/cost-guardian export json ~/costs.json  # Export all data as JSON
+```
+
+### View/Customize Multipliers
+```
+/cost-guardian multipliers  # Show current tool estimation multipliers
 ```
 
 ### Reset Session Tracking
