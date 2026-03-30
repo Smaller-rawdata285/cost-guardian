@@ -10,14 +10,14 @@ cat > /dev/null
 
 # Check budget violations
 RESULT=$(node -e "
-  const store = require('$SCRIPT_DIR/store');
+  const store = require('${SCRIPT_DIR}/store');
   store.initDb();
-  const violations = store.checkBudget('$SESSION_ID');
+  const violations = store.checkBudget('${SESSION_ID}');
   const hardViolations = violations.filter(v => v.mode === 'hard');
   const warns = violations.filter(v => v.mode === 'warn' || v.mode === 'soft');
 
-  // Check for override
-  if (hardViolations.length > 0 && store.isOverridden('$SESSION_ID')) {
+  // Check for override (with 24h expiry)
+  if (hardViolations.length > 0 && store.isOverridden('${SESSION_ID}')) {
     process.exit(0);
   }
 
@@ -41,7 +41,7 @@ RESULT=$(node -e "
         );
       } else if (w.mode === 'soft') {
         process.stderr.write(
-          '⚠️  Cost Guardian: ' + w.scope + ' budget exceeded (\$' + w.spent.toFixed(2) + '/\$' + w.limit.toFixed(2) + ') [soft mode - continuing]\\n'
+          '⚠️  Cost Guardian: ' + w.scope + ' budget exceeded (\$' + w.spent.toFixed(2) + '/\$' + w.limit.toFixed(2) + ') [soft mode]\\n'
         );
       }
     }
@@ -55,7 +55,6 @@ if [ $EXIT_CODE -ne 0 ]; then
   exit 2
 fi
 
-# Output any warnings to stderr
 if [ -n "$RESULT" ]; then
   echo "$RESULT" >&2
 fi
