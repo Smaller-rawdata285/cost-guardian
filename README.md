@@ -1,23 +1,78 @@
 # Cost Guardian
 
-**Real-time cost tracking and budget management for Claude Code.**
+**The only Claude Code cost tool that tells you WHERE you're wasting money and HOW to stop.**
 
-Stop burning through your limits blindly. Cost Guardian tracks every token, shows your burn rate, and blocks spending before it spirals.
+Other tools show what you spent. Cost Guardian shows what you *wasted*, what you *got for it*, and what you *could have saved* — with an efficiency score, ROI metrics, and model savings calculator that no other tool has.
 
-Zero setup. No Docker. No Grafana. No environment variables. Just install and go.
+Zero setup. No Docker. No Grafana. Just install and go.
 
 ---
 
-## What's New in v2.0
+## What Makes This Different
 
-- **Per-tool cost feedback** — see `⚡ +$0.03 (Read) | Session: $2.41` after every tool call
-- **Multi-model comparison** — `/cost-estimate` shows cost across all Claude models with savings %
-- **Branch cost tracking** — `/cost-report branch` shows how much each feature branch costs
-- **CSV/JSON export** — `/cost-guardian export csv ~/costs.csv`
-- **Session start summary** — see yesterday's spend when you start a new session
-- **Configurable multipliers** — tune estimation accuracy per tool type
-- **8 models** — all current Anthropic models including extended thinking variants
-- **Security fixes** — SQL injection patched, error logging added, override expiry
+Every cost tracking tool shows you a number. Cost Guardian gives you **intelligence**:
+
+| Feature | Cost Guardian | ccusage | claude-code-otel | Built-in /cost |
+|---------|:---:|:---:|:---:|:---:|
+| Real-time tracking | ✅ | ❌ (post-hoc) | ✅ | ✅ |
+| Budget guardrails | ✅ | ❌ | ❌ | ❌ |
+| **Waste detection** | ✅ | ❌ | ❌ | ❌ |
+| **Efficiency score** | ✅ | ❌ | ❌ | ❌ |
+| **Cost-per-line ROI** | ✅ | ❌ | ❌ | ❌ |
+| **Model savings calculator** | ✅ | ❌ | ❌ | ❌ |
+| **Anomaly detection** | ✅ | ❌ | ❌ | ❌ |
+| **GitHub badge** | ✅ | ❌ | ❌ | ❌ |
+| Per-branch costs | ✅ | ❌ | ❌ | ❌ |
+| Multi-model comparison | ✅ | ❌ | ❌ | ❌ |
+| CSV/JSON export | ✅ | ✅ | ✅ | ❌ |
+| Zero setup | ✅ | ✅ | ❌ (Docker) | ✅ |
+
+---
+
+## Insights Engine (No Other Tool Has This)
+
+### Efficiency Score
+Every session gets a score from 0-100 showing how efficiently you're spending:
+```
+Efficiency Score: 68/100
+██████████████░░░░░░ Good
+
+Wasted: $1.43 of $4.71 (30%)
+  14 redundant file reads ($0.82)
+  3 failed/empty bash commands ($0.34)
+  2 calls were 3x+ more expensive than average ($0.27)
+```
+
+### Cost-Per-Line ROI
+Know what you're getting for your money:
+```
+Cost per line:    $0.03/line
+Lines added:      +247
+Lines removed:    -89
+Cost per commit:  $1.18/commit
+```
+
+### Model Savings Calculator
+See how much you could save with different models:
+```
+Current spend:    $4.71
+Cheapest option:  $1.02 (Claude Haiku 4.5)
+Potential saving: $3.69 (78% cheaper)
+```
+
+### Anomaly Detection
+Catches runaway sessions before they drain your limits:
+```
+⚠️ ANOMALY: 3.2x your average session cost
+This session: $14.20 | Average: $4.40
+Top driver: Agent ($9.80, 4x)
+```
+
+### GitHub Badge
+Add your AI development cost to your README:
+```
+![AI Dev Cost](https://img.shields.io/badge/AI_Dev_Cost-$142-2ea44f)
+```
 
 ---
 

@@ -2,6 +2,18 @@
 
 All notable changes to Cost Guardian will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- **Insights Engine** — `/cost-insights` with 5 features no other tool has:
+  - **Efficiency Score** (0-100) — rates how efficiently you spend per session
+  - **Waste Detection** — finds redundant reads, failed commands, retry storms, expensive outliers
+  - **Cost-Per-Line ROI** — tracks lines added/removed and calculates cost per line of code
+  - **Model Savings Calculator** — shows how much you could save with cheaper models (hindsight analysis)
+  - **Anomaly Detection** — flags sessions that are 2x+ your average cost with top cost driver
+  - **GitHub Badge Generator** — `![AI Dev Cost](https://img.shields.io/badge/...)` for your README
+- New skill: `/cost-insights` with subcommands: report, waste, roi, savings, anomaly, badge
+
 ## [2.0.0] - 2026-03-30
 
 ### Added
