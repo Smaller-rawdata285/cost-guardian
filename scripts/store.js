@@ -317,6 +317,12 @@ function checkBudget(sessionId) {
       violations.push({ scope: 'weekly', spent: cost, limit: budgets.weekly.limit, mode: budgets.weekly.mode });
     }
   }
+  if (budgets.monthly) {
+    const cost = getMonthlyCost();
+    if (cost > budgets.monthly.limit) {
+      violations.push({ scope: 'monthly', spent: cost, limit: budgets.monthly.limit, mode: budgets.monthly.mode });
+    }
+  }
 
   return violations;
 }
