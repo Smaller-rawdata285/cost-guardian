@@ -1,18 +1,11 @@
 ## What does this PR do?
+Brief description of the changes.
 
-Brief description.
-
-## Type of change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Documentation
-- [ ] Performance improvement
-
-## Testing
-How did you test this?
+## Related Issues
+Closes #
 
 ## Checklist
-- [ ] No external dependencies added
-- [ ] Error logging used (not silent catches)
-- [ ] SQL uses `escapeSQL()` (no raw interpolation)
-- [ ] Works on macOS and Linux
+- [ ] Code follows project style
+- [ ] Tests pass locally
+- [ ] Documentation updated (if needed)
+- [ ] No breaking changes (or documented)
