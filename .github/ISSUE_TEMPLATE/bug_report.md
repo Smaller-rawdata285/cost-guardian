@@ -1,25 +1,30 @@
 ---
 name: Bug Report
-about: Something isn't working correctly
-title: "[Bug] "
+about: Report a bug or unexpected behavior
+title: '[Bug] '
 labels: bug
+assignees: ''
 ---
 
-**Describe the bug**
-What happened?
+## Describe the Bug
+A clear description of what the bug is.
 
-**Expected behavior**
-What should have happened?
+## Steps to Reproduce
+1. Install cost-guardian
+2. Run '...'
+3. See error
 
-**Steps to reproduce**
-1.
-2.
-3.
+## Expected Behavior
+What you expected to happen.
 
-**Environment**
-- OS:
-- Node.js version:
-- Claude Code version:
+## Actual Behavior
+What actually happened.
 
-**Error logs**
-Check `~/.cost-guardian/error.log` and paste relevant lines.
+## Environment
+- OS: [e.g., macOS 15, Ubuntu 24.04]
+- Node.js version: [e.g., 22.x]
+- Claude Code version: [e.g., 1.x]
+- Cost Guardian version: [e.g., latest]
+
+## Logs/Screenshots
+If applicable, add logs or screenshots.
