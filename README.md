@@ -250,6 +250,16 @@ Then add to your Claude Code settings (`~/.claude/settings.json`):
 /cost-guardian multipliers  # Show current tool estimation multipliers
 ```
 
+### Cost Insights
+```
+/cost-insights              # Full report: efficiency score, waste, ROI, savings, anomalies
+/cost-insights waste        # Detailed waste breakdown (redundant reads, failed commands)
+/cost-insights roi          # Cost-per-line and cost-per-commit ROI
+/cost-insights savings      # Model savings calculator (Opus vs Sonnet vs Haiku)
+/cost-insights anomaly      # Anomaly detection — flags runaway sessions
+/cost-insights badge        # Generate a GitHub badge for your README
+```
+
 ### Reset Session Tracking
 ```
 /cost-guardian reset
@@ -265,7 +275,7 @@ Cost Guardian uses Claude Code's hook system to intercept tool calls:
 
 2. **PostToolUse hook** (`track-usage.sh`): After each tool call, estimates token usage from the tool's input/output and logs it to a local SQLite database.
 
-3. **Skills**: Three slash commands (`/cost-guardian`, `/cost-estimate`, `/cost-report`) that query the database and generate reports.
+3. **Skills**: Four slash commands (`/cost-guardian`, `/cost-estimate`, `/cost-report`, `/cost-insights`) that query the database and generate reports.
 
 ### Token Estimation
 
@@ -363,12 +373,15 @@ A: The SQLite database at `~/.cost-guardian/usage.db` can be queried directly wi
 
 Contributions welcome! Areas where help is needed:
 
+- [x] ~~CSV/JSON export commands~~ (shipped in v2.0)
+- [x] ~~Per-branch cost tracking~~ (shipped in v2.0)
+- [x] ~~Efficiency scoring and waste detection~~ (shipped via `/cost-insights`)
 - [ ] More accurate token estimation per tool type
 - [ ] Team/shared budget features
-- [ ] CSV/JSON export commands
 - [ ] Integration with Anthropic's Usage API for exact costs
 - [ ] Dashboard UI (terminal-based)
 - [ ] Slack/Discord notifications on budget warnings
+- [ ] Burn rate alerts (warn when session is consuming budget unusually fast)
 
 ---
 
